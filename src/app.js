@@ -2,7 +2,9 @@ const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
 const forecast = require('./utils');
+
 const app = express();
+const port = process.env.PORT || 3000;
 
 //Define paths for express config
 const viewsPath = path.join(__dirname, '../templates/views');
@@ -72,6 +74,6 @@ app.get('*', (req, res) => {
 //app.com/about
 //app.com/weather
 
-app.listen(3000, () => {
-  console.log('Server started successfully at port 3000.');
+app.listen(port, () => {
+  console.log('Server started successfully on port' + port);
 });

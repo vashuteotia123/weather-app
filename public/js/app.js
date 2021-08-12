@@ -18,27 +18,24 @@ weatherForm.addEventListener('submit', (e) => {
   temperature.textContent = '';
   feels_like.textContent = '';
   humidity.textContent = '';
-  fetch('http://localhost:3000/weather?cityname=' + location).then(
-    (response) => {
-      response.json().then((data) => {
-        if (data.error) {
-          errorMessage.textContent = data.error;
-          locationMessage.textContent = '';
-          weather.textContent = '';
-          temperature.textContent = '';
-          feels_like.textContent = '';
-          humidity.textContent = '';
-        } else {
-          errorMessage.textContent = '';
-          locationMessage.textContent = 'Location : ' + data.forecast.Location;
-          weather.textContent = 'Weather : ' + data.forecast.Weather;
-          temperature.textContent =
-            'Temperature : ' + data.forecast.Temperature;
-          feels_like.textContent = 'Feels Like : ' + data.forecast.Feels_like;
-          humidity.textContent = 'Humidity : ' + data.forecast.Humidity;
-          console.log(data.forecast);
-        }
-      });
-    }
-  );
+  fetch('/weather?cityname=' + location).then((response) => {
+    response.json().then((data) => {
+      if (data.error) {
+        errorMessage.textContent = data.error;
+        locationMessage.textContent = '';
+        weather.textContent = '';
+        temperature.textContent = '';
+        feels_like.textContent = '';
+        humidity.textContent = '';
+      } else {
+        errorMessage.textContent = '';
+        locationMessage.textContent = 'Location : ' + data.forecast.Location;
+        weather.textContent = 'Weather : ' + data.forecast.Weather;
+        temperature.textContent = 'Temperature : ' + data.forecast.Temperature;
+        feels_like.textContent = 'Feels Like : ' + data.forecast.Feels_like;
+        humidity.textContent = 'Humidity : ' + data.forecast.Humidity;
+        console.log(data.forecast);
+      }
+    });
+  });
 });
