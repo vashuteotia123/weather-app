@@ -1,0 +1,25 @@
+form {
+  text-align: center;
+}
+
+form input {
+  border: 1px solid #888888;
+  border-radius: 8px;
+}
+.content {
+  color: black;
+  text-align: center;
+}
+
+form button {
+  cursor: pointer;
+  border: 1px solid #888888;
+  background: #888888;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+img {
+  width: 400px;
+}

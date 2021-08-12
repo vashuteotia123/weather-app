@@ -1,0 +1,32 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta
+      name='viewport'
+      content='width=device-width, initial-scale=1.0'
+      user-scalable='false'
+    />
+    <title>Weather App</title>
+    <link rel='stylesheet' href='/css/styles.css' />
+    
+  </head>
+  <body>
+    {{>header}}
+    <form>
+      <input placeholder='Type city name here.'>
+      <button type='submit'>Search</button>
+    </form>
+
+    <div class = 'content'>
+      <p id = 'errorMessage'></p>
+      <p id = 'locationMessage'></p>
+      <p id = 'weather'></p>
+      <p id = 'temperature'></p>
+      <p id = 'feels_like'></p>
+      <p id = 'humidity'></p>
+      </div>
+    {{>footer}}
+    <script src='/js/app.js'></script>
+  </body>
+</html>
