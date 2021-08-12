@@ -1,5 +1,3 @@
-console.log('Testing js file linkage');
-
 const weatherForm = document.querySelector('form');
 const searchElement = document.querySelector('input');
 const errorMessage = document.querySelector('#errorMessage');
@@ -34,7 +32,6 @@ weatherForm.addEventListener('submit', (e) => {
         temperature.textContent = 'Temperature : ' + data.forecast.Temperature;
         feels_like.textContent = 'Feels Like : ' + data.forecast.Feels_like;
         humidity.textContent = 'Humidity : ' + data.forecast.Humidity;
-        console.log(data.forecast);
       }
     });
   });
